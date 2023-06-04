@@ -1,0 +1,74 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header .photo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    padding: auto;
+    /* border: 3px solid white; */
+}
+.header .informations{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.header .title{
+    text-align: center;
+}
+
+.informations{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.informations p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem;
+    
+}
+
+.informations p::before{
+    content: '';
+    display: inline-block;
+    margin-right: .25rem;
+    width: 1rem;
+    height: 1rem;
+    background-image: url('/assets/img/icons/profile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.informations .job::before{
+    background-image: url('/assets/img/icons/job.svg');
+}
+
+.informations .location::before{
+    background-image: url('/assets/img/icons/location.svg');
+}
+
+.informations .phone::before{
+    background-image: url('/assets/img/icons/phone.svg');
+}
+
+.informations .email::before{
+    background-image: url('/assets/img/icons/email.svg');
+}
+
+/* desktop */
+@media only screen and (min-width: 768px){
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
