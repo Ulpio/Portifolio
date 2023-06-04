@@ -18,11 +18,9 @@
     align-items: flex-start;
     margin-top: 20px;
 }
-
 .header .title{
     text-align: center;
 }
-
 .informations{
     display: flex;
     flex-direction: column;
@@ -36,7 +34,6 @@
     margin: .5rem;
     
 }
-
 .informations p::before{
     content: '';
     display: inline-block;
@@ -47,28 +44,34 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
-
 .informations .job::before{
     background-image: url('/assets/img/icons/job.svg');
 }
-
 .informations .location::before{
     background-image: url('/assets/img/icons/location.svg');
 }
-
 .informations .phone::before{
     background-image: url('/assets/img/icons/phone.svg');
 }
-
 .informations .email::before{
     background-image: url('/assets/img/icons/email.svg');
 }
-
-/* desktop */
 @media only screen and (min-width: 768px){
+
+    
     .header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        display: grid;
+        grid-template-areas: "photo title" "photo informations";
     }
-}
+    .header .photo {
+        grid-area: photo;
+        margin: 0 auto;
+    }
+    .header .informations {
+        grid-area: informations;
+    }
+    .header .title {
+        grid-area: title;
+        text-align: start;
+    }
+    }
